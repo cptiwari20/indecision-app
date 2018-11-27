@@ -207,9 +207,10 @@ var AddOptions = function (_React$Component6) {
     value: function handleAdd(e) {
       e.preventDefault();
       var option = e.target.elements.option.value;
-      if (option) {
-        this.props.handleAddOption(option);
+      if (!option) {
+        return alert("ERROR: Please enter some text");
       }
+      this.props.handleAddOption(option);
       e.target.elements.option.value = "";
     }
   }, {

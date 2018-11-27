@@ -94,9 +94,10 @@ class AddOptions extends React.Component {
   handleAdd(e){
     e.preventDefault();
     const option = e.target.elements.option.value;
-    if(option){
-      this.props.handleAddOption(option)
+    if(!option){
+      return alert("ERROR: Please enter some text")
     }
+    this.props.handleAddOption(option)
     e.target.elements.option.value = "";
   }
   render(){
