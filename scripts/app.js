@@ -1,10 +1,19 @@
+'use strict';
 
-// var templete = <p>This is a JSX syntax</p>
 var templete = React.createElement(
-  'h1',
-  { id: 'someId'},
-  'this is some content'
-)
+  'div',
+  null,
+  React.createElement(
+    'h1',
+    null,
+    'Indecision App'
+  ),
+  React.createElement(
+    'p',
+    null,
+    'This is an indecision app'
+  )
+);
 var appRoot = document.querySelector('#app');
 
-ReactDOM.render(templete, appRoot)
+ReactDOM.render(templete, appRoot);
