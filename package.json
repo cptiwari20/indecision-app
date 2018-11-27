@@ -4,5 +4,9 @@
   "main": "index.js",
   "repository": "https://github.com/cptiwari20/indecision-app.git",
   "author": "cptiwari20 <cptiwari20@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1"
+  }
 }
