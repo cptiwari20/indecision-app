@@ -4,10 +4,14 @@ import Header from './Header';
 import Actions from './Actions';
 import Options from './Options';
 import AddOptions from './AddOptions';
+import OptionModal from './OptionModal';
 
 
 class IndecisionApp extends Component {
-  state = {options: ["one", "two option", "three"]}
+  state = {
+    options: ["one", "two option", "three"],
+    selectedOption: undefined
+  }
 
   handleRemoveAll = () => {
       this.setState(() =>{ return { options: []} });
@@ -17,9 +21,9 @@ class IndecisionApp extends Component {
     const i = Math.floor(Math.random() * this.state.options.length)
     const option = this.state.options[i]
     if(!option){
-      alert('Sorry no Option Found');
+      this.setState({ selectedOption: 'Sorry no Option Found'});
     }
-    alert(option)
+    this.setState({ selectedOption: option })
   }
   handleAddOption = (option) => {
     this.setState((prevState) => {
@@ -34,6 +38,9 @@ class IndecisionApp extends Component {
       options: prevState.options.filter((option) => optionForDel !== option)
       }
     })
+  };
+  handleCloseModal =() =>{
+    this.setState({selectedOption: undefined})
   }
 
   render(){
@@ -51,6 +58,9 @@ class IndecisionApp extends Component {
           options={this.state.options}
           handleDeleteOption={this.handleDeleteOption} />
         <AddOptions handleAddOption={this.handleAddOption}/>
+        <OptionModal 
+          selectedOption={this.state.selectedOption}
+          closeModal={this.handleCloseModal}/>
       </div>
     )
   }
