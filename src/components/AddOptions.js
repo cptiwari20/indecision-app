@@ -14,7 +14,7 @@ export default class AddOptions extends Component {
     return(
       <form onSubmit={this.handleAdd.bind(this)}>
           <input type="text" name="option"/>
-          <button type='submit'>Add option</button>
+          <button type='submit'>Add more options</button>
       </form>
     )
   }

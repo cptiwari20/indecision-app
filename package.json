@@ -7,11 +7,10 @@
   "license": "MIT",
   "scripts": {
     "serve": "live-server public/",
-    "build": "webpack --watch",
-    "build-babel": "npx babel src/app.js --out-file scripts/app.js --presets=env,react --watch"
+    "build": "webpack",
+    "dev-server": "webpack-dev-server"
   },
   "dependencies": {
-    "live-server": "^1.2.1",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "webpack": "^4.26.1"
@@ -21,6 +20,8 @@
     "@babel/preset-env": "^7.1.6",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.4",
-    "webpack-cli": "^3.1.2"
+    "live-server": "^1.2.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
   }
 }
