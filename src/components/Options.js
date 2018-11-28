@@ -1,16 +1,18 @@
 import React from 'react';
 import Option from './Option';
 
-export default class Options extends React.Component {
-  render(){
-    return(
+ const Options = (props) => (
       <div>
-        {this.props.options.map((option, i) => {
+        {props.options.map((option, i) => {
           return(
-            <Option option={option} key={i} />
+            <div>
+              <Option 
+                  option={option} 
+                  key={i}
+                  handleDeleteOption={props.handleDeleteOption} />
+            </div>
           )
         })}
       </div>
-    )
-  }
-};
+);
+export default Options;

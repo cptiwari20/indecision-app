@@ -27,6 +27,13 @@ class IndecisionApp extends Component {
         options: prevState.options.concat(option)
       }
     })
+  };
+  handleDeleteOption = (optionForDel) =>{
+    this.setState((prevState) => {
+      return {
+      options: prevState.options.filter((option) => optionForDel !== option)
+      }
+    })
   }
 
   render(){
@@ -39,8 +46,10 @@ class IndecisionApp extends Component {
         <Actions 
           handleClick={this.handleClick}
           options={this.state.options.length}
-          handleRemoveAll={this.handleRemoveAll}/>
-        <Options options={this.state.options}/>
+          handleRemoveAll={this.handleRemoveAll} />
+        <Options
+          options={this.state.options}
+          handleDeleteOption={this.handleDeleteOption} />
         <AddOptions handleAddOption={this.handleAddOption}/>
       </div>
     )
