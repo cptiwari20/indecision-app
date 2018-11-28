@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 export default class AddOptions extends Component {
-  handleAdd(e){
+  handleAdd = (e) => {
     e.preventDefault();
     const option = e.target.elements.option.value;
     if(!option){
@@ -12,7 +12,7 @@ export default class AddOptions extends Component {
   }
   render(){
     return(
-      <form onSubmit={this.handleAdd.bind(this)}>
+      <form onSubmit={this.handleAdd}>
           <input type="text" name="option"/>
           <button type='submit'>Add more options</button>
       </form>

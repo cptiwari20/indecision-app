@@ -7,20 +7,13 @@ import AddOptions from './AddOptions';
 
 
 class IndecisionApp extends Component {
-  constructor(props){
-    super(props);
-    this.handleRemoveAll = this.handleRemoveAll.bind(this);
-    this.handleClick = this.handleClick.bind(this);
-    this.handleAddOption = this.handleAddOption.bind(this);
+  state = {options: ["one", "two option", "three"]}
 
-    this.state = {options: ["one", "two option", "three"]}
-  }
-
-  handleRemoveAll(){
+  handleRemoveAll = () => {
       this.setState(() =>{ return { options: []} });
       console.log(this.state)
   }
-  handleClick(){
+  handleClick = () => {
     const i = Math.floor(Math.random() * this.state.options.length)
     const option = this.state.options[i]
     if(!option){
@@ -28,7 +21,7 @@ class IndecisionApp extends Component {
     }
     alert(option)
   }
-  handleAddOption(option){
+  handleAddOption = (option) => {
     this.setState((prevState) => {
       return {
         options: prevState.options.concat(option)
