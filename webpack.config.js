@@ -18,7 +18,7 @@ module.exports = {
         }
       }
     },{
-      test: /\.scss$/,
+      test: /\.s?css$/,
       use: [
         'style-loader', // templates CSS into normal JS
         'css-loader', // creates style nodes from JS strings 

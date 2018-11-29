@@ -49,15 +49,21 @@ class IndecisionApp extends Component {
 
     return(
       <div>
-        <Header title={title} subtitle={subtitle}/>
-        <Actions 
-          handleClick={this.handleClick}
-          options={this.state.options.length}
-          handleRemoveAll={this.handleRemoveAll} />
-        <Options
-          options={this.state.options}
-          handleDeleteOption={this.handleDeleteOption} />
-        <AddOptions handleAddOption={this.handleAddOption}/>
+          <Header 
+            title={title} 
+            subtitle={subtitle}/>
+        <div className="container">
+          <Actions 
+            handleClick={this.handleClick}
+            options={this.state.options.length}
+            handleRemoveAll={this.handleRemoveAll} />
+          <Options
+            options={this.state.options}
+            handleDeleteOption={this.handleDeleteOption} />
+          <AddOptions 
+            handleAddOption={this.handleAddOption}/>
+        </div>
+        
         <OptionModal 
           selectedOption={this.state.selectedOption}
           closeModal={this.handleCloseModal}/>
