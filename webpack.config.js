@@ -17,6 +17,13 @@ module.exports = {
           plugins: ["@babel/plugin-proposal-class-properties"]
         }
       }
+    },{
+      test: /\.scss$/,
+      use: [
+        'style-loader', // templates CSS into normal JS
+        'css-loader', // creates style nodes from JS strings 
+        'sass-loader' // compiles the Sass to CSS by using the node-sass 
+      ]
     }]
   },
   devtool: 'cheap-module-eval-source-map',
