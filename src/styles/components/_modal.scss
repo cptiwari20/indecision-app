@@ -7,6 +7,7 @@
   align-items: center;  
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 
 .ReactModalPortal .ReactModal__Overlay--after-open{
@@ -18,7 +19,6 @@
 
 .modal{
   background-color: $light-blue;
-  justify-content: center;
   outline: none;
   color:white;
   padding: $l-size;
@@ -31,6 +31,7 @@
 }
 
 .modal__option{
+  text-align: center;
   font-size: 2rem;
   font-weight: 500;
   word-break: break-all;

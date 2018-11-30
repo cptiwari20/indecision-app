@@ -7,13 +7,17 @@
   font-weight: bold;
   border: none;
   border-bottom: 0.6rem solid darken($soulful, 10%);
-  margin-bottom: $l-size;
+  margin-bottom: $s-size;
 }
 
 .big-button:disabled{
   opacity: 0.5;
 }
-
+@media (min-width: $desktop-breakpoint){
+  .big-button{
+    margin-bottom: $l-size; 
+  }
+}
 .button{
   padding: $s-size;
   background-color: $soulful;

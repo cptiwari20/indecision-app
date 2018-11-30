@@ -2,7 +2,7 @@
   background-color: $off-black;
   color: white;
   padding: $m-size 0;
-  margin-bottom: $xl-size; 
+  margin-bottom: $s-size; 
 };
 
 .header__title{
@@ -16,4 +16,10 @@
   color: $off-white;
   margin: 0%;
   font-weight: 500;
+}
+
+@media (min-width: $desktop-breakpoint){
+  .header{
+    margin-bottom: $xl-size; 
+  }
 }
