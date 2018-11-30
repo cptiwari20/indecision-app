@@ -14,11 +14,15 @@ export default class AddOptions extends Component {
   }
   render(){
     return(
-      <form onSubmit={this.handleAdd}>
-          {this.state.error && <h4>{this.state.error}</h4>}
-          <input type="text" name="option"/>
+     <div>
+      {this.state.error && <p className="add-option--error">{this.state.error}</p>}
+      <form 
+        className="add-option"
+        onSubmit={this.handleAdd}>
+          <input className="add-option--input" type="text" name="option"/>
           <button className="button" type='submit'>Add more options</button>
       </form>
+     </div>
     )
   }
 };

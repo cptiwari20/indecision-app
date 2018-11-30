@@ -9,7 +9,7 @@ import OptionModal from './OptionModal';
 
 class IndecisionApp extends Component {
   state = {
-    options: ["one", "two option", "three"],
+    options: [],
     selectedOption: undefined
   }
 
@@ -45,7 +45,7 @@ class IndecisionApp extends Component {
 
   render(){
       const title= "Indecision App";
-      const subtitle = "Put your options inside your mind into computer";
+      const subtitle = "Put your options outside from your mind into computer";
 
     return(
       <div>
@@ -57,11 +57,13 @@ class IndecisionApp extends Component {
             handleClick={this.handleClick}
             options={this.state.options.length}
             handleRemoveAll={this.handleRemoveAll} />
+         <div className="widget">
           <Options
-            options={this.state.options}
-            handleDeleteOption={this.handleDeleteOption} />
+          options={this.state.options}
+          handleDeleteOption={this.handleDeleteOption} />
           <AddOptions 
-            handleAddOption={this.handleAddOption}/>
+          handleAddOption={this.handleAddOption}/>
+         </div>
         </div>
         
         <OptionModal 
